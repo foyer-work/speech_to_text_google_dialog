@@ -12,9 +12,10 @@ permission from the user for this. This package is currently available on Androi
 This example shows how to display a google speech to text dialog and get the result.
 
 ```dart
-bool isServiceAvailable = await SpeechToTextGoogle.getInstance()
-                    .showGoogleDialog(onTextReceived: (data) {
-                },
-                  // locale: "en-US",
-);
+bool isServiceAvailable = await SpeechToTextGoogleDialog.getInstance().showGoogleDialog(
+        onTextReceived: (data) {
+          // Do something with the data
+        },
+        locale: context.locale.languageCode,
+      );
 ```
